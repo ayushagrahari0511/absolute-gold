@@ -1,9 +1,34 @@
-html,
-body {
+* {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  --brown_primary: #9a6c38;
+  --brown_secondary: #a98031;
+  --brown_secondary: #dfd0af;
+  --button_background: #dfd0b1;
+  --black_primary: ;
+  --black_secondary: #a1a09e;
+  /* #916c38
+  
+  
+  #cccccc
+  #666666
+  #333333
+  #111111 */
+
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+}
+
+h1 {
+  font-size: 4.8rem;
 }
 
 a {
@@ -11,6 +36,26 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+
+
+@media (max-width: 1199.98px) {
+
 }
+
+
+/* for Medium devices such as tablets */
+@media (max-width: 991.98px) {
+
+}
+
+/* Small devices (landscape phone, ) */
+
+@media (max-width: 767.98px) {
+  
+}
+
+/* Small devices such as phone */
+
+@media (max-width: 575.98px) {
+  
+ }
