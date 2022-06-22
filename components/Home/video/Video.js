@@ -16,12 +16,12 @@ const Video = () => {
       <div className={styles.play} >
         {
           isPlay ?
-            <i class="fa-solid fa-volume-xmark" onClick={() => {
+            <i className="fa-solid fa-volume-xmark" onClick={() => {
               setIsPlay(false)
               videoRef.current.muted = true;
             }} />
             :
-            <i class="fa-solid fa-volume-high" onClick={() => {
+            <i className="fa-solid fa-volume-high" onClick={() => {
               setIsPlay(true)
               videoRef.current.muted = false;
             }} />
