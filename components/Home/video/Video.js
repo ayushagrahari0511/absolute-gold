@@ -11,7 +11,7 @@ const Video = () => {
       loop 
       muted 
       ref={videoRef} 
-      src="/B2BGold.webm"
+      src="/B2BGold.mp4"
       playsInline>
         <source src="/B2BGold.webm" type="video/webm" />
       </video>
