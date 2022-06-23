@@ -7,7 +7,7 @@ const Video = () => {
   return (
     <div className={styles.wrapper}>
       <video autoPlay loop muted ref={videoRef}>
-        <source src="/B2BGold.webm" type="video/webm" />
+        <source src="/B2BGold.mp4" type="video/webm" />
       </video>
       <div className={styles.skip}>
         SKIP
