@@ -1,0 +1,132 @@
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background: url(/banner_img-2.webp);
+    background-position: top 0 left 0;
+    background-repeat: no-repeat;
+    background-size: 105% 105%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.wrapper>header {
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
+    display: flex;
+    letter-spacing: 1px;
+    align-items: center;
+    grid-gap: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.wrapper img {
+    width: 6rem;
+}
+
+.userIcon {
+    color: var(--color_gold);
+}
+
+.skip {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    grid-gap: .5rem;
+    transition: all 0.4s;
+}
+
+.skipIcon {
+    color: inherit;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.skip:hover {
+    color: #333;
+}
+
+
+.desc {
+    margin-bottom: 4rem;
+    padding: 0 2rem;
+    text-align: right;
+}
+
+.desc>h1 {
+    font-weight: 400;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(#f5c400, #f08e06);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+@media (max-width: 1199.98px) {
+    .desc>h1 {
+        font-size: 3.2rem;
+    }
+    
+}
+
+
+/* for Medium devices such as tablets */
+@media (max-width: 991.98px) {
+    .wrapper>header {
+        font-size: 1.4rem;
+    }
+    .wrapper img {
+        width: 4.5rem;
+    }
+
+    .desc>h1 {
+        font-size: 3rem;
+    }       
+}
+
+/* Small devices (landscape phone, ) */
+
+@media (max-width: 767.98px) {
+    .wrapper {
+        background-size: 125% 105%;
+    }
+
+    .wrapper > header {
+        grid-gap: 1.5rem;
+    }
+
+    .wrapper img {
+        width: 3.5rem;
+    }
+
+    .desc>h1 {
+        font-size: 2.8rem;
+    }
+
+}
+
+/* Small devices such as phone */
+
+@media (max-width: 575.98px) {
+    .wrapper {
+        background-size: 200% 105%;
+    }
+
+    .wrapper > header {
+        grid-gap: 1rem;
+    }
+
+    .wrapper img {
+        width: 3rem;
+    }
+
+    .desc>h1 {
+        font-size: 2.2rem;
+    }
+ }

@@ -4,3 +4,129 @@
   align-items: center;
   justify-content: center;
 }
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: #010001;
+}
+.wrapper video {
+  width: 80%;
+  object-fit: cover;
+}
+
+.skip {
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgba(255,255,255,0.8);
+  display: flex;
+  align-items: center;
+  grid-gap: .5rem;
+  transition: all 0.4s ;
+}
+
+.skipIcon {
+  color: inherit;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.skip:hover {
+  color: #333;
+}
+
+.play {
+  position: absolute;
+  bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem;
+  width: 5rem;
+  height: 5rem;
+  left: 5rem;
+  color: rgba(255,255,255,0.8);
+  font-size: 2.5rem;
+  cursor: pointer;
+  border: 2px solid rgba(255,255,255,0.8);
+  border-radius: 50%;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+
+@media (max-width: 1199.98px) {
+  .play {
+      bottom: 3.5rem;
+      width: 4.5rem;
+      height: 4.5rem;
+      left: 4rem;
+      font-size: 2rem;
+  }
+
+  .icon {
+      width: 2rem;
+      height: 2rem;
+  }
+  
+}
+
+
+/* for Medium devices such as tablets */
+@media (max-width: 991.98px) {
+
+}
+
+/* Small devices (landscape phone, ) */
+
+@media (max-width: 767.98px) {
+  .skip {
+      top: 3.5rem;
+      right: 3.5rem;
+      font-size: 1.5rem;
+  }
+      
+  .play {
+      bottom: 3rem;
+      width: 4rem;
+      height: 4rem;
+      left: 4rem;
+      font-size: 1.8rem;
+  }
+
+  .icon {
+      width: 1.8rem;
+      height: 1.8rem;
+  }
+}
+
+/* Small devices such as phone */
+
+@media (max-width: 575.98px) {
+  .skip {
+      top: 3rem;
+      right: 2rem;
+  }
+      
+  .play {
+      bottom: 8rem;
+      width: 3rem;
+      height: 3rem;
+      left: 2rem;
+      font-size: 1.4rem;
+  }
+
+}
