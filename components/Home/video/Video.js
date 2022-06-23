@@ -6,7 +6,13 @@ const Video = () => {
   const videoRef = useRef(null);
   return (
     <div className={styles.wrapper}>
-      <video autoPlay loop muted ref={videoRef} playsInline>
+      <video 
+      autoPlay 
+      loop 
+      muted 
+      ref={videoRef} 
+      src="/B2BGold.webm"
+      playsInline>
         <source src="/B2BGold.webm" type="video/webm" />
       </video>
       <div className={styles.skip}>
