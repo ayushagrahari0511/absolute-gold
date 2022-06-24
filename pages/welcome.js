@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import styles from '../styles/welcome.module.css'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,26 +9,32 @@ import { faUser } from '@fortawesome/free-regular-svg-icons'
 
 const Welcome = () => {
   return (
-    <div className={styles.wrapper}>
-      <header>
-        <Link href="/">
-          <div className={styles.skip}>
-            <FontAwesomeIcon icon={faUser} className={styles.userIcon} />
-            Register/login
-          </div>
-        </Link>
-        <Link href="/">
-          <div className={styles.skip}>
-            SKIP
-            <FontAwesomeIcon icon={faHandPointRight} className={styles.skipIcon} />
-          </div>
-        </Link>
-        <img src="/logo.png" alt="" />
-      </header>
-      <div className={styles.desc}>
-        <h1>Welcome to the finest b2b <br /> gold trading platform</h1>
+    <>
+      <Head>
+        <title>Absolute Gold</title>
+        <meta name="description" content="Welcome To The Finest B2B Gold Trading Platform" />
+      </Head>
+      <div className={styles.wrapper}>
+        <header>
+          <Link href="/">
+            <div className={styles.skip}>
+              <FontAwesomeIcon icon={faUser} className={styles.userIcon} />
+              Register/login
+            </div>
+          </Link>
+          <Link href="/home">
+            <div className={styles.skip}>
+              SKIP
+              <FontAwesomeIcon icon={faHandPointRight} className={styles.skipIcon} />
+            </div>
+          </Link>
+          <img src="/logo.png" alt="" />
+        </header>
+        <div className={styles.desc}>
+          <h1>Welcome to the finest b2b gold trading platform</h1>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/index.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHandPointRight, faVolumeHigh, faVolumeXmark } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'

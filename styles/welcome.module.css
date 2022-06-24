@@ -4,7 +4,7 @@
     background: url(/banner_img-2.webp);
     background-position: top 0 left 0;
     background-repeat: no-repeat;
-    background-size: 105% 105%;
+    background-size: 100% 105%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -28,6 +28,7 @@
 }
 
 .userIcon {
+    width: 1.5rem;
     color: var(--color_gold);
 }
 
@@ -51,6 +52,7 @@
 
 
 .desc {
+    width: 45%;
     margin-bottom: 6rem;
     padding: 0 2rem;
     text-align: right;
@@ -69,10 +71,7 @@
 
 
 @media (max-width: 1199.98px) {
-    .desc>h1 {
-        font-size: 3.2rem;
-    }
-    
+
 }
 
 
@@ -81,13 +80,10 @@
     .wrapper>header {
         font-size: 1.4rem;
     }
+
     .wrapper img {
         width: 4.5rem;
     }
-
-    .desc>h1 {
-        font-size: 3rem;
-    }       
 }
 
 /* Small devices (landscape phone, ) */
@@ -97,7 +93,7 @@
         background-size: 125% 105%;
     }
 
-    .wrapper > header {
+    .wrapper>header {
         grid-gap: 1.5rem;
     }
 
@@ -105,28 +101,31 @@
         width: 3.5rem;
     }
 
-    .desc>h1 {
-        font-size: 2.8rem;
+    .desc {
+        width: 55%;
     }
-
 }
 
 /* Small devices such as phone */
 
 @media (max-width: 575.98px) {
     .wrapper {
-        background-size: 200% 105%;
+        background-size: 180% 105%;
+        background-position: top 0 left -3rem;
     }
 
-    .wrapper > header {
-        grid-gap: 1rem;
+    .wrapper>header {
+        grid-gap: 2rem;
+    }
+    .skip {
+        padding: 1rem;
+        border-radius: .5rem;
+        background-image: linear-gradient(153.4deg, rgba(56, 56, 56, 1) 46.3%, rgba(28, 28, 28, 1) 46.8%);
+        color: #fff;
     }
 
-    .wrapper img {
-        width: 3rem;
+    .desc {
+        width: 75%;
+        margin-bottom: 7rem;
     }
-
-    .desc>h1 {
-        font-size: 2.2rem;
-    }
- }
+}
