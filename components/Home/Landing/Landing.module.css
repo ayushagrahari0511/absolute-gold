@@ -3,6 +3,246 @@
     height: 100vh;
     background: url(/banner_img.webp);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: 100% 107vh;
+    background-position: top 0 left 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.container {
+    padding: 1rem 0;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header section starts here */
+
+.container > header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo > img {
+    position: relative;
+    top: 1rem;
+    width: 4rem;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    grid-gap: 6rem;
+}
+
+.login {
+    position: relative;
+    top: .5rem;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    grid-gap: 1.5rem;
+}
+
+.login > a {
+    transition: all 0.3s;
+}
+
+.login > a:hover {
+    color: var(--brown_primary);
+}
+
+.search_container {
+    background: #fff;
+    padding: .7rem 1rem;
+    border-radius: 4rem;
+    display: flex;
+    align-items: center;
+    grid-gap: 4.5rem;
+}
+
+.search_container label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_container > input {
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    color: var(--black_secondary);
+}
+
+.search_container > input::placeholder {
+    color: var(--black_secondary);
+}
+
+.search {
+    width: 2rem;
+    height: 2rem;
+    color: var(--button_background);
+}
+
+.microphone {
+    display: flex;
+    align-items: center;
+}
+
+.mike {
+    background: var(--button_background);
+    border-radius: 50%;
+    padding: .8rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    color: var(--brown_primary);
+}
+
+/* Header section ends here */
+
+.description {
+    width: 35%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    align-self: flex-end;
+    text-align: left;
+}
+
+.description > h1 {
+    font-weight: 400;
+    line-height: 6rem;
+    color: var(--brown_primary);
+}
+
+.description > h3 {
+    line-height: 4.5rem;
+    font-weight: 400;
+    color: var(--brown_tertiary);
+}
+
+.description > h5 {
+    font-weight: 400;
+    line-height: 2.8rem;
+    color: var(--brown_tertiary);
+}
+
+.description > a {
+    width: fit-content;
+    margin-top: 1.5rem;
+    border: 1.5px solid #fff;
+    padding: 1rem 3rem;
+    border-radius: 5rem;
+    background: transparent;
+    color: var(--brown_tertiary);
+}
+
+
+@media (max-width: 1199.98px) {
+    .links {
+        grid-gap: 4rem;
+    }
+
+    .search_container {
+        padding: .7rem 1rem;
+        border-radius: 4rem;
+        grid-gap: 2rem;
+    }
+
+    .description {
+        width: 40%;
+    }
+}
+
+
+/* for Medium devices such as tablets */
+@media (max-width: 991.98px) {
+    .wrapper {
+        background-size: 105% 107vh;
+        background-position: top 0 left 0;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: flex-end;
+        grid-gap: 1rem;
+    }
+
+    .search_container {
+        grid-gap: 1rem;
+    }
+
+    .description {
+        width: 45%;
+    }
+
+    .description > a {
+        padding: .6rem 2rem;
+    }
+}
+
+/* Small devices (landscape phone, ) */
+
+@media (max-width: 767.98px) {
+    .wrapper {
+        background-size: 120% 107vh;
+        background-position: top 0 left 0;
+    }
+
+    .description {
+        width: 60%;
+        margin-bottom: 5rem;
+    }
+
+    .description > h1 {
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 5rem;
+    }
+    
+    .description > h3 {
+        line-height: 4rem;
+        font-size: 2.4rem;
+        font-weight: 500;
+    }
+    
+    .description > h5 {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    .description > a {
+        margin-right: 3rem;
+        align-self: flex-end;
+    }
+}
+
+/* Small devices such as phone */
+
+@media (max-width: 575.98px) {
+    .wrapper {
+        background-size: 150% 100vh;
+        background-position: top 0 left -4rem;
+    }
+
+    .logo > img {
+        top: 2rem;
+        width: 4rem;
+    }
+    .search_container > input {
+        width: 16rem;
+        font-size: 1.4rem;
+    }
+
+    .description {
+        margin-bottom: 6rem;
+    }
+ }

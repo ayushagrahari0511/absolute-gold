@@ -16,7 +16,7 @@ const Welcome = () => {
       </Head>
       <div className={styles.wrapper}>
         <header>
-          <Link href="/">
+          <Link href="/register">
             <div className={styles.skip}>
               <FontAwesomeIcon icon={faUser} className={styles.userIcon} />
               Register/login
