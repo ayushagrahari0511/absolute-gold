@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHandPointRight } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
+import Image from 'next/image'
 
 
 const Welcome = () => {
@@ -28,7 +29,7 @@ const Welcome = () => {
               <FontAwesomeIcon icon={faHandPointRight} className={styles.skipIcon} />
             </div>
           </Link>
-          <img src="/logo.png" alt="" />
+          <Image src="/logo.png" alt="logo" width={200} height={200} />
         </header>
         <div className={styles.desc}>
           <h1>Welcome to the finest b2b gold trading platform</h1>

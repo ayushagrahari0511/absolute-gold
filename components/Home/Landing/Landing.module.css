@@ -3,7 +3,7 @@
     height: 100vh;
     background: url(/banner_img.webp);
     background-repeat: no-repeat;
-    background-size: 100% 107vh;
+    background-size: 100% 106vh;
     background-position: top 0 left 0;
     position: relative;
     display: flex;
@@ -29,10 +29,11 @@
     justify-content: space-between;
 }
 
-.logo > img {
+.logo img {
     position: relative;
     top: 1rem;
-    width: 4rem;
+    width: 4rem !important;
+    height: 5.2rem !important;
 }
 
 .links {
@@ -142,6 +143,12 @@
     border-radius: 5rem;
     background: transparent;
     color: var(--brown_tertiary);
+    transition: all 0.3s;
+}
+
+.description > a:hover {
+    background: var(--brown_primary);
+    border: 1.5px solid var(--brown_primary);
 }
 
 
@@ -233,9 +240,8 @@
         background-position: top 0 left -4rem;
     }
 
-    .logo > img {
+    .logo img {
         top: 2rem;
-        width: 4rem;
     }
     .search_container > input {
         width: 16rem;

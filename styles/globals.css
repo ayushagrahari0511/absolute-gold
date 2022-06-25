@@ -10,13 +10,11 @@ html {
   --brown_secondary: #a98031;
   --brown_tertiary: #dfd0af;
   --button_background: #dfd0b1;
-  --black_primary: ;
+  --black_primary: #cccccc;
   --color_gold: #ebc940;
   --black_secondary: #a1a09e;
+  --black_tertiary: #666666;
   /* #916c38
-  
-  
-  #cccccc
   #666666
   #333333
   #111111 */
@@ -39,6 +37,7 @@ h3 {
 h5 {
   font-size: 2rem;
 }
+
 a {
   color: inherit;
   text-decoration: none;
