@@ -86,6 +86,7 @@
 }
 
 .search {
+    cursor: pointer;
     width: 2rem;
     height: 2rem;
     color: var(--button_background);
@@ -102,6 +103,7 @@
     padding: .8rem;
     width: 1.4rem;
     height: 1.4rem;
+    cursor: pointer;
     color: var(--brown_primary);
 }
 
