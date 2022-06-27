@@ -88,13 +88,23 @@ a {
 
 /* for Medium devices such as tablets */
 @media (max-width: 991.98px) {
-
+  .swiper-slide.swiper-slide-active img{
+    width: 18rem !important;
+    height: 14rem !important;
+  }
 }
 
 /* Small devices (landscape phone, ) */
 
 @media (max-width: 767.98px) {
-  
+  .swiper-slide.swiper-slide-active h3{
+    font-size: 2.2rem;
+  }
+
+  .swiper-slide.swiper-slide-active img{
+    width: 18rem !important;
+    height: 12rem !important;
+  }
 }
 
 /* Small devices such as phone */

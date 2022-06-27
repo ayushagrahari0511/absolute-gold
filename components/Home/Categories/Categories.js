@@ -56,7 +56,7 @@ const Categories = () => {
                 </div>
                 <div className={styles.my_swiper}>
                     <Swiper
-                        slidesPerView={3.5}
+                        slidesPerView={2}
                         spaceBetween={20}
                         centeredSlides={true}
                         pagination={{
@@ -68,20 +68,13 @@ const Categories = () => {
                             delay: 2000,
                             disableOnInteraction: false,
                         }}
-                        loop={true}
-                        breakpoints = {
-                            {
-                                // when window width is >= 990px
-                                991.98: {
-                                    slidesPerView: 3.5,
-                                    spaceBetween: 20,
-                                },
-                                767.98: {
-                                    slidesPerView: 2,
-                                    spaceBetween: 20,
-                                }
+                        breakpoints={{
+                            575.98: {
+                                slidesPerView: 3.5,
+                                spaceBetween: 20,
                             }
-                        }
+                        }}
+                        loop={true}
                         className={styles.swiper}>
                         {
                             data.map((item) => (
