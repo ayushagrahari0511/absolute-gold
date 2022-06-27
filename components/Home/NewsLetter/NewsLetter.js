@@ -55,7 +55,7 @@ const NewsLetter = () => {
             </div>
             <div className={styles.para}>
                 <h6>
-                    We're confident we've provided all the best for you. Stay connect with us
+                    We&apos;re confident we&apos;ve provided all the best for you. Stay connect with us
                 </h6>
             </div>
         </div>
