@@ -1,0 +1,256 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    padding: 2rem 0;
+    width: 90%;
+    display: flex;
+    grid-gap: 4rem;
+    flex-direction: column;
+}
+
+/* Navigation starts here */
+.navigation {
+    display: flex;
+    grid-gap: .5rem;
+    color: #ccc;
+}
+
+.navigation a {
+    color: #333;
+}
+
+.navigation p {
+    color: #c87300;
+}
+
+/* Navigation ends here */
+
+/* Body starts here */
+.body {
+    align-self: center;
+    width: 85%;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left {
+    padding: 8rem 2rem;
+    border-right: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2.5rem;
+}
+
+.left h2 {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    grid-gap: 2rem;
+    font-size: 3rem;
+    color: #9a6c38;
+}
+
+.loginIcon {
+    color: #dfd0b1;
+}
+
+.left form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2.5rem;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    grid-gap: .5rem;
+}
+
+.input label {
+    color: #333;
+    font-size: 1.4rem;
+    color: #1b1919;
+    font-weight: 400;
+}
+
+.input input {
+    outline: none;
+    border: 1px solid rgba(129, 129, 129, 0.25);
+    height: 4.5rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+    color: #1b1919;
+}
+
+.input input::-webkit-outer-spin-button,
+.input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.remeberMe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+    color: #1b1919;
+}
+
+.forgetPass {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    grid-gap: .5rem;
+    color: var(--brown_primary);
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+}
+
+.forgetPass:hover {
+    opacity: 1;
+}
+
+.button {
+    background: transparent;
+    outline: none;
+    color: var(--brown_primary);
+    font-weight: 500;
+    font-size: 1.4rem;
+    border: 2px solid var(--brown_primary);
+    padding: 1.4rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background: var(--brown_primary);
+    color: #fff;
+}
+
+.right {
+    padding: 8rem 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-gap: 2.5rem;
+}
+
+.right h2 {
+    font-size: 3rem;
+    color: var(--brown_primary);
+    opacity: 0.5;
+    font-weight: 400;
+}
+
+.right h5 {
+    text-align: center;
+    line-height: 2.4rem;
+    color: #666666;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.right a {
+    color: #fff;
+    padding: 1rem 2rem;
+    background: var(--brown_primary);
+    transition: all 0.3s ease-in-out;
+}
+
+.right a:hover {
+    opacity: 0.5;
+}
+
+@media (max-width: 1199.98px) {
+    .left {
+        padding: 5rem 2rem;
+        grid-gap: 2rem;
+    }
+
+    .right {
+        padding: 5rem 2rem;
+        grid-gap: 2rem;
+    }
+}
+
+
+/* for Medium devices such as tablets */
+@media (max-width: 991.98px) {
+    .container {
+        grid-gap: 3rem;
+    }
+
+    .body {
+        width: 100%;
+        grid-gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .left {
+        padding: 4rem 1.5rem;
+        grid-gap: 2rem;
+    }
+
+    .right {
+        padding: 4rem 1rem;
+        grid-gap: 2rem;
+    }
+}
+
+/* Small devices (landscape phone, ) */
+
+@media (max-width: 767.98px) {
+    .left h2 {
+        align-items: center;
+        grid-gap: 1rem;
+        font-size: 2.5rem;
+    }
+
+    .right h2 {
+        font-size: 2.5rem;
+    }
+
+    .remeberMe {
+        flex-direction: column;
+        align-items: flex-start;
+        grid-gap: .5rem;
+    }
+}
+
+/* Small devices such as phone */
+
+@media (max-width: 575.98px) {
+  .body {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+}
+
+.left {
+    padding: 2rem .5rem;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    grid-gap: 2rem;
+}
+
+.right {
+    padding: 2rem .5rem;
+    grid-gap: 1rem;
+}
+ }

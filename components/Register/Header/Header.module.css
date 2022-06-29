@@ -1,0 +1,146 @@
+.wrapper {
+    width: 100%;
+    height: 65vh;
+    background: url(/4.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 92%;
+    height: 96%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.searchInput {
+    align-self: flex-end;
+}
+
+/* Search container starts here */
+.search_container {
+    background: #fff;
+    padding: .7rem 1rem;
+    border-radius: 4rem;
+    display: flex;
+    align-items: center;
+    grid-gap: 4.5rem;
+}
+
+.search_container label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_container > input {
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    color: var(--black_secondary);
+}
+
+.search_container > input::placeholder {
+    color: var(--black_secondary);
+}
+
+.search {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    color: var(--button_background);
+}
+
+.microphone {
+    display: flex;
+    align-items: center;
+}
+
+.mike {
+    background: var(--button_background);
+    border-radius: 50%;
+    padding: .8rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    cursor: pointer;
+    color: var(--brown_primary);
+}
+
+/* Search container ends here */
+
+.my_account {
+    display: flex;
+    grid-gap: 1rem;
+    align-items: center;
+    font-size: 3.6rem;
+    background: -webkit-linear-gradient(#c87300, #e9ce66);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2.5rem;
+}
+
+.my_account h1 {
+    width: fit-content;
+    font-size: 3.6rem;
+    /* color: #9a6c38; */
+}
+
+
+@media (max-width: 1199.98px) {
+    .container {
+        height: 94%;
+    }
+    
+    .search_container {
+        padding: .7rem 1rem;
+        border-radius: 4rem;
+        grid-gap: 2rem;
+    }
+
+    .my_account {
+        margin-bottom: 1rem;
+    }
+    
+}
+
+@media (max-width: 991.98px) {
+    .wrapper {
+        height: 60vh;
+        background-size: 120% 100%;
+    }
+
+    .search_container {
+        grid-gap: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .wrapper {
+        height: 40vh;
+        background-size: 110% 100%;
+    }
+    .my_account {
+        font-size: 3.2rem;
+    }
+    
+    .my_account h1 {
+        font-size: 3.2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .wrapper {
+        height: 25vh;
+        background-size: 110% 100%;
+    }
+
+    .search_container > input {
+        width: 16rem;
+        font-size: 1.4rem;
+    }
+ }

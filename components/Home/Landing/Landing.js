@@ -1,7 +1,7 @@
 import styles from './Landing.module.css'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch, faMicrophone } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faMicrophone, faUser } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 
 const Landing = () => {
@@ -15,12 +15,12 @@ const Landing = () => {
             </div>
             <div className={styles.links}>
               <div className={styles.login}>
-                <Link href="/login">
-                  LOGIN
+                <Link href="/register">
+                  REGISTER
                 </Link>
                 <span>|</span>
-                <Link href="/register">
-                  SIGN IN
+                <Link href="/login">
+                  LOGIN
                 </Link>
               </div>
               <form className={styles.search_container}>
