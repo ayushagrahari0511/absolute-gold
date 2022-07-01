@@ -44,6 +44,9 @@
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+    outline: none !important;
 }
 
 .list {
@@ -52,6 +55,13 @@
     display: flex;
     align-items: center;
 }
+
+/* .list > a {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+    outline: none !important;
+    } */
+  
 
 .categories {
     display: flex;
@@ -74,6 +84,7 @@
 
 .categories h3 {
     font-size: 1.8rem;
+    text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 400;
     color: #a1a09e;

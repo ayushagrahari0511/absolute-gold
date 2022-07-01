@@ -39,6 +39,9 @@
     align-items: center;
     grid-gap: .5rem;
     transition: all 0.4s;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+    outline: none !important;  
 }
 
 .skipIcon {
@@ -128,7 +131,11 @@
     }
 
     .desc {
-        width: 75%;
+        width: 85%;
         margin-bottom: 7rem;
+    }
+
+    .desc h1 {
+        font-size: 3rem;
     }
 }

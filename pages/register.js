@@ -1,17 +1,23 @@
-import Header from '../components/Register/Header/Header'
 import Main from '../components/Register/Main'
-import NewsLetter from '../components/Home/NewsLetter/NewsLetter'
-import Footer from '../components/Home/Footer/Footer'
+import Layout from '../shared/Layout'
 
 const Register = () => {
   return (
     <div>
-        <Header/>
-        <Main/>
-        <NewsLetter/>
-        <Footer/>
+      <Main />
     </div>
   )
 }
+
+Register.getLayout = function getLayout(page) {
+  return (
+    <Layout img="/4.webp">
+      {
+        page
+      }
+    </Layout>
+  )
+}
+
 
 export default Register

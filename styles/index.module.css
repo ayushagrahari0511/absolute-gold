@@ -33,6 +33,9 @@
   align-items: center;
   grid-gap: .5rem;
   transition: all 0.4s ;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-focus-ring-color: transparent !important;
+  outline: none !important;  
 }
 
 .skipIcon {
@@ -60,6 +63,9 @@
   cursor: pointer;
   border: 2px solid rgba(255,255,255,0.8);
   border-radius: 50%;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-focus-ring-color: transparent !important;
+  outline: none !important;  
 }
 
 .icon {
