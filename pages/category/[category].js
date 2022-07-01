@@ -40,7 +40,7 @@ const Category = () => {
   )
 }
 
-Category.getLayout = function getLayout(page) {
+Category.getLayout = function GetLayout(page) {
   const router = useRouter()
   const { category } = router.query
   return (
