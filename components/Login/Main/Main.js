@@ -40,7 +40,7 @@ const Main = () => {
                                 </div>
                                 <Link href="/forgetPass">
                                     <div className={styles.forgetPass}>
-                                        <FontAwesomeIcon icon={faCog} />
+                                        <FontAwesomeIcon icon={faCog} className={styles.faCog} />
                                         Lost your password?
                                     </div>
                                 </Link>

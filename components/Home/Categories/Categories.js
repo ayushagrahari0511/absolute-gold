@@ -59,7 +59,7 @@ const Categories = () => {
                     </h1>
                     <Image src="/bell2.webp" width={50} height={50} />
                 </div>
-                <div className={styles.my_swiper}>
+                <div className={`my_swiper ${styles.my_swiper}`}>
                     {
                         isSSR &&
                         <Swiper

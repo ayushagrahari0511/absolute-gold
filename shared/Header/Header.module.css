@@ -80,6 +80,7 @@
 }
 
 .my_account p {
+    width: 50%;
     color: #fff;
 }
 
@@ -95,6 +96,7 @@
 }
 
 .my_account > .title h1 {
+    width: 60%;
     text-transform: uppercase;
     width: fit-content;
     font-size: 3.6rem;

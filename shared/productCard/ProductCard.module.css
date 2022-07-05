@@ -1,0 +1,147 @@
+.product_container {
+    width: 27rem;
+    display: flex;
+    padding: 1.5rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 1rem;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0px 3px 13px 0px rgb(0 0 0/ 8%);
+    background: #fff;
+}
+
+.product_img {
+    position: relative;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24rem;
+}
+
+.product_img h5 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: fit-content;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: .2rem 1rem;
+    background: #6e8e2b;
+    border-radius: 3rem;
+    transition: all .3s ease-in-out;
+}
+
+.product_container:hover .product_img h5 {
+    opacity: 0;
+}
+
+.shopping {
+    position: absolute;
+    display: flex;
+    grid-gap: 1rem;
+    align-items: center;
+    bottom: -4rem;
+    z-index: 1;
+    transform: scale(0);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.product_container:hover .shopping {
+    transform: scale(1);
+    opacity: 1;
+}
+.cart {
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+.cartIcon {
+    width: 1.8rem !important;
+    height: 1.8rem !important;
+    color: #a98031;
+}
+.product_container > h4 {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    transition: all .3s ease;
+    font-weight: 400;
+    color: #414141;
+    transition: all .3s ease-in-out;
+}
+
+.product_container:hover > h4 {
+    opacity: 0;
+}
+
+.price {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.price > h3 {
+    color: #000;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+
+}
+
+
+/* for Medium devices such as tablets --------------
+---------------------*/
+@media (max-width: 991.98px) {
+    .product_img h5 {
+        font-size: 1.1rem;
+    }
+
+    .product_container > h4 {
+        font-size: 1.3rem;
+    }
+
+    .price > h3 {
+        font-size: 1.4rem;
+    }
+
+    .product_container {
+        width: 22rem;
+        padding: 1.5rem 1rem;
+        grid-gap: 1rem;
+    }
+    
+    .product_img {
+        width: 95%;
+        height: 19rem;
+    }
+}
+
+/* Small devices (landscape phone, )------------------
+--------------------------- */
+
+/* Small devices such as phone -------------------
+-----------------------------------*/
+
+@media (max-width: 575.98px) {
+    .product_container {
+        width: 25rem;
+        padding: 1.5rem 1rem;
+        grid-gap: 1rem;
+    }
+    
+    .product_img {
+        width: 95%;
+        height: 22rem;
+    }
+ }

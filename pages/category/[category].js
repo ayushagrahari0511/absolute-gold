@@ -21,7 +21,7 @@ const Category = () => {
         <div className={styles.category}>
           {
             data.earrings.map((item, index) => (
-              <Link href="/" key={index}>
+              <Link href={`/category/${category}/${item.title}`} key={index}>
                 <div className={styles.category_box}>
                   <div className={styles.category_icon}>
                     <div className={styles.front_content}>
@@ -40,7 +40,9 @@ const Category = () => {
   )
 }
 
+
 Category.getLayout = function GetLayout(page) {
+
   const router = useRouter()
   const { category } = router.query
   return (

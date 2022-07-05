@@ -1,0 +1,454 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+    outline: none !important;
+}
+
+.container {
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 3rem;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+    outline: none !important;
+}
+
+.product_content {
+    display: flex;
+    grid-gap: 3rem;
+    margin-top: 2rem;
+}
+
+/* Left Section starts here ----------------------
+---------------------------- */
+.favoratesnackbarAdded {
+    padding: 1rem 3rem;
+    color: #fff !important;
+    border-radius: .3rem;
+    background: var(--brown_primary) !important;
+}
+
+.product_img_wrapper {
+    width: 45rem;
+}
+
+.product_img_container {
+    width: 45rem;
+    height: 35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dddddd;
+}
+
+.product_img {
+    position: relative;
+    height: 30rem;
+    padding: 2.5rem;
+    width: 30rem;
+}
+
+.product_img img {
+    width: 8rem !important;
+}
+
+.bottom_product_wrapper {
+    position: relative;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.bottom_carousel_left {
+    position: absolute;
+    top: 40%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    left: -1rem;
+    border-radius: 50%;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    background: var(--brown_primary);
+    z-index: 5;
+}
+
+.bottom_carousel_right {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    top: 40%;
+    cursor: pointer;
+    right: -1rem;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background: var(--brown_primary);
+    z-index: 5;
+}
+
+.bottom_carousel_icon {
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+}
+
+.bottom_product_img {
+    position: relative;
+    border-radius: .4rem;
+    width: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8rem;
+    border: 1px solid #dddddd;
+}
+
+.bottom_product_img img {
+    object-fit: contain !important;
+}
+
+/* Left Section ends here ----------------------
+---------------------------- */
+
+/* Right Section starts here ----------------------
+---------------------------- */
+.product_info_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+}
+
+.product_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product_title h3 {
+    margin: 0;
+    text-transform: capitalize;
+    color: #a1a09e;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+
+.heart {
+    margin-top: .5rem;
+    cursor: pointer;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.redHeart {
+    color: rgb(231, 34, 34);
+    margin-top: .5rem;
+    cursor: pointer;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.product_info_wrapper h5 {
+    text-transform: capitalize;
+    color: #666666;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2rem;
+}
+
+.price>h4 {
+    color: #ff6b6b;
+    font-weight: 400;
+    font-size: 2.2rem;
+}
+
+.price>h5 {
+    color: #000;
+    text-decoration: line-through;
+    font-size: 1.6rem;
+}
+
+.inStock {
+    color: #4db801 !important;
+    text-decoration: none !important;
+}
+
+.outStock {
+    color: rgb(207, 32, 32) !important;
+    text-decoration: none !important;
+}
+
+.product_info_wrapper>h2 {
+    color: var(--brown_primary);
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.product_features {
+    display: flex;
+    grid-gap: 15rem;
+}
+
+.feature_title,
+.feature_desc {
+    display: flex;
+    flex-direction: column;
+    grid-gap: .7rem;
+}
+
+.feature_title>h5 {
+    color: #333333;
+    font-size: 1.3rem;
+}
+
+.feature_desc>h5 {
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.product_info_wrapper>button {
+    width: 15rem;
+    cursor: pointer;
+    height: 4rem;
+    padding: 0 3rem;
+    outline: none;
+    border: none;
+    font-size: 1.4rem;
+    border-radius: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    grid-gap: .5rem;
+    background: var(--brown_primary);
+    color: #fff;
+}
+
+.shoppingBag {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.product_info_wrapper>button:hover {
+    background: #fff;
+    color: var(--brown_primary);
+    border: 1px solid var(--brown_primary);
+}
+
+/* Right Section Ends here ----------------------
+---------------------------- */
+
+/* Carousel Section Starts here -------------------------
+--------------------------- */
+.mayLike {
+    width: 100%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 2rem;
+    background: hwb(40deg 19% 34% / 5%);
+    margin: 4rem 0;
+}
+
+.recommended {
+    width: 100%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 2rem;
+    background: #fff;
+    margin: 4rem 0;
+
+}
+
+.list {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel_title {
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ded3bc;
+}
+
+.arrowRight {
+    color: var(--brown_primary);
+    width: 3rem;
+    height: 3rem;
+}
+
+.carousel_title>h1 {
+    color: #a1a09e;
+    font-size: 3.4rem;
+    font-weight: 400;
+}
+
+.carousel_wrapper {
+    position: relative;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.faArrowLeft,
+.faArrowRight {
+    cursor: pointer;
+    position: absolute;
+    color: #a7a9ac;
+    width: 3.5rem;
+    height: 3.5rem;
+    z-index: 2;
+}
+
+.faArrowLeft {
+    top: 50%;
+    left: -5rem;
+}
+
+.faArrowRight {
+    top: 50%;
+    right: -5rem;
+}
+
+
+/* .carousel_wrapper {
+
+} */
+
+
+/* for Medium devices such as tablets --------------
+---------------------*/
+@media (max-width: 991.98px) {
+    .product_content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .product_img_wrapper {
+        width: 100%;
+    }
+
+    .bottom_product_img {
+        width: 16rem;
+        height: 8rem;
+    }
+
+    .bottom_product_img img {
+        object-fit: contain !important;
+    }
+
+
+    .product_img_container {
+        width: 100%;
+        height: 35rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #dddddd;
+    }
+
+    .carousel_width {
+        width: 95%;
+    }
+
+    .mayLike {
+        padding: 2rem 1rem;
+        grid-gap: 2rem;
+        margin: 1rem 0;
+    }
+
+    .recommended {
+        padding: 2rem 1rem;
+        grid-gap: 2rem;
+        margin: 1rem 0;
+    }
+
+    .faArrowLeft,
+    .faArrowRight {
+        color: #a7a9ac;
+        width: 3rem;
+        border: 1px solid #a7a9ac;
+        border-radius: 50%;
+        background: #fff;
+        height: 3rem;
+    }
+
+    .faArrowLeft {
+        top: 50%;
+        left: -1.5rem;
+    }
+
+    .faArrowRight {
+        top: 50%;
+        right: -1.5rem;
+    }
+}
+
+/* Small devices (landscape phone, )------------------
+  --------------------------- */
+
+@media (max-width: 767.98px) {
+
+    .product_img {
+        height: 25rem;
+        width: 25rem;
+    }
+
+    .product_img_container {
+        height: 30rem;
+    }
+
+    .carousel_title {
+        padding-bottom: 1.5rem;
+    }
+
+    .carousel_title>h1 {
+        font-size: 2.8rem;
+    }
+
+    .arrowRight {
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+}
+
+/* Small devices such as phone -------------------
+  -----------------------------------*/
+
+@media (max-width: 575.98px) {
+    .product_img {
+        height: 22rem;
+        width: 22rem;
+    }
+
+    .bottom_product_img {
+        width: 15rem;
+        height: 8rem;
+    }
+
+    .faArrowLeft,
+    .faArrowRight {
+        display: none;
+    }
+}
