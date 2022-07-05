@@ -59,7 +59,7 @@ const Product = () => {
                     <Link href={`/category/earring`}>Earring</Link>
                     /
                     <p>
-                        {productInfo.title}
+                        {productInfo && productInfo.title}
                     </p>
                 </div>
                 <div className={styles.product_content}>
