@@ -98,7 +98,7 @@ const data = [
   },
 ]
 
-const dashboard = () => {
+const Dashboard = () => {
   const [timing, setTiming] = useState("Yearly");
   const [focusBar, setFocusBar] = useState(null)
   const [isMounted, setIsMounted] = useState(false)
@@ -299,7 +299,7 @@ function CustomTooltip({ active, payload, label }) {
 
 // Layout here ------------------------
 // ------------------
-dashboard.getLayout = function GetLayout(page) {
+Dashboard.getLayout = function GetLayout(page) {
   return (
     <AdminLayout>
       {page}
@@ -307,4 +307,4 @@ dashboard.getLayout = function GetLayout(page) {
   )
 }
 
-export default dashboard
+export default Dashboard
