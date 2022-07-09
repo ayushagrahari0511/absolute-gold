@@ -64,6 +64,9 @@ const Footer = () => {
                             <Link href="/my-account">
                                 My Account
                             </Link>
+                            <Link href="/admin/dashboard">
+                                Admin
+                            </Link>
                         </ul>
                     </div>
                     <div className={styles.list}>

@@ -1,0 +1,61 @@
+Functional Scope :
+/TODO: Admin module -
+/TODO: Seller LIsting
+/TODO: Creating userid, password and different types of memberships(Silver, Gold, Diamond,Platinum)
+/TODO: Monthly Report,
+/TODO: Day Wise report
+/TODO: Location Wish Report
+/TODO: Control over buyer/seller
+/TODO: After placing order by the buyer, admin will generate the invoice service charge
+/TODO: create product category
+
+
+Store front -
+/TODO: Too selling products
+/TODO: Search
+/TODO: Offers/ promotions
+/TODO: Filtration
+
+
+Seller Module -
+/TODO: Filling up the form for taking membership
+/TODO: Membership payment
+/TODO: Product listing
+/TODO: Will get a message about the buyers
+/TODO: Buyer Feedback
+/TODO: App Feedback
+/TODO: Service charge to admin
+/TODO: KYC upload
+/TODO: Reports - Daywise and Monthly
+
+
+1. Buyer module -
+/TODO: Creating Buyer Profile
+/TODO: Select product/s
+/TODO: Add to cart
+/TODO: Can select shipping
+/TODO: Product feedback
+/TODO: App feedback
+/TODO: Purchase history
+/TODO: address
+
+
+2. The Cart
+/TODO: The cart will display all the selected Items which are being selected by the Buyer
+/TODO: System will allow the buyer to remove item/s from the cart
+/TODO: System will also allow it to close the Cart and go to paymet
+
+
+3. Order Placement Screen
+/TODO: On clicking the "Place Order" button from the Cart this form will be opened
+/TODO: If we have received the Client Name and the Demographic Information this form will be
+pre populated. However, the system will allow the user to edit the information.
+/TODO: In case we haven't received the details system, allow the user to enter all details.
+/TODO: Finally on clicking the "Place Order" button an unique Order Number will be generated
+and order will be saved and data will be stored in the DB.
+/TODO: System will send emails to 1) Admin 2) Seller 3) Buyer
+
+
+4) Payment Gateway
+/TODO: It will allow buyer for payment (cart total)
+/TODO: Saved payment option

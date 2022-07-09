@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: center;
+    border: 1px solid #e6ecf5;
+    padding: 3rem 2rem;
+    border-radius: .3rem;
+}
+
+.icon {
+    font-size: 3rem;
+}
+
+.wrapper h4 {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Karla', sans-serif;
+}
+
+.wrapper h6 {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
