@@ -1,10 +1,15 @@
+import { useState } from 'react'
 import styles from './Landing.module.css'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faMicrophone, faUser } from '@fortawesome/free-solid-svg-icons'
+import { FaRegUser, FaTimes } from 'react-icons/fa'
+import { AiOutlineMenu } from 'react-icons/ai'
 import Image from 'next/image'
+import { data } from '../Categories/data'
 
 const Landing = () => {
+  const [toggleMenu, setToggleMenu] = useState(false)
   return (
     <>
       <div className={styles.wrapper}>
@@ -14,15 +19,6 @@ const Landing = () => {
               <Image src="/logo.png" width={100} height={100} alt="" />
             </div>
             <div className={styles.links}>
-              <div className={styles.login}>
-                <Link href="/register">
-                  REGISTER
-                </Link>
-                <span>|</span>
-                <Link href="/login">
-                  LOGIN
-                </Link>
-              </div>
               <form className={styles.search_container}>
                 <label htmlFor="search">
                   <FontAwesomeIcon icon={faSearch} className={styles.search} />
@@ -32,6 +28,19 @@ const Landing = () => {
                   <FontAwesomeIcon icon={faMicrophone} className={styles.mike} />
                 </div>
               </form>
+              <div className={styles.login}>
+                <Link href="/login">
+                  <span>
+                    <FaRegUser />
+                    <h5>
+                      LOGIN
+                    </h5>
+                  </span>
+                </Link>
+                <div className={styles.menu} onClick={() => setToggleMenu(true)}>
+                  <AiOutlineMenu />
+                </div>
+              </div>
             </div>
           </header>
           <div className={styles.description}>
@@ -42,6 +51,25 @@ const Landing = () => {
               KNOW MORE
             </Link>
           </div>
+        </div>
+        <div className={toggleMenu ? `${styles.navigation} ${styles.active}` : styles.navigation}>
+          <div className={styles.cancel} onClick={() => setToggleMenu(false)}>
+            <FaTimes />
+          </div>
+          <h4>
+            <Link href="/home">
+              Home
+            </Link>
+          </h4>
+          {
+            data.map((cat, i) => (
+              <h4 key={i}>
+                <Link href={`/category/${cat.title}`}>
+                  {cat.title}
+                </Link>
+              </h4>
+            ))
+          }
         </div>
       </div>
     </>

@@ -21,7 +21,7 @@ const Footer = () => {
                             <Link href="/sitemap">
                                 Sitemap
                             </Link>
-                            <Link href="/privacy-policy">
+                            <Link href="/privacy_policy">
                                 Privacy Policy
                             </Link>
                             <Link href="/my-account">

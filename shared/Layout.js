@@ -1,4 +1,4 @@
-import Footer from '../components/Home/Footer/Footer'
+import Footer from '../shared/Footer/Footer'
 import NewsLetter from "../components/Home/NewsLetter/NewsLetter";
 import Header from './Header/Header';
 import RouteChange from './RouteChange';

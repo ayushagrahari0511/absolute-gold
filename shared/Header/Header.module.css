@@ -18,6 +18,10 @@
 
 .searchInput {
     align-self: flex-end;
+    display: flex;
+    align-items: center;
+    grid-gap: 4rem;
+    margin-right: 2rem;
 }
 
 /* Search container starts here */
@@ -69,6 +73,92 @@
     color: var(--brown_primary);
 }
 
+.login {
+    position: relative;
+    top: .5rem;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    grid-gap: 2rem;
+}
+
+.login span {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    grid-gap: .5rem;
+    color: #dfd0b1;
+    font-size: 1.6rem;
+}
+
+.login span h5 {
+    font-size: 1.4rem;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 400;
+    transition: all 0.3s;
+}
+
+.login span:hover h5 {
+    color: var(--brown_primary);
+}
+
+.menu {
+    cursor: pointer;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    color: #dfd0b1;
+    justify-content: center;
+}
+
+/* Navigation menu starts here-------------------
+----------------- */
+.navigation {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2.5rem;
+    overflow-y: auto;
+    align-items: center;
+    height: 0;
+    background: rgba(0, 0, 0, 0.9);
+    transition: all 0.5s ease;
+    z-index: 5;
+}
+
+.navigation.active {
+    padding: 4rem 0;
+    height: 100vh;
+}
+
+.cancel {
+    position: absolute;
+    background: -webkit-linear-gradient(#e9ce66, #c87300);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #ca8a2f;
+    cursor: pointer;
+    font-size: 2.2rem;
+    top: 4rem;
+    right: 4rem;
+}
+
+.navigation h4 {
+    background: -webkit-linear-gradient(#e9ce66, #c87300);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    -webkit-text-fill-color: transparent;
+}
 
 /* Search container ends here */
 

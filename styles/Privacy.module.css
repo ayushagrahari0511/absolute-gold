@@ -1,0 +1,63 @@
+.container {
+    padding: 6rem 4rem;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2.5rem;
+}
+
+.container > h5 {
+    color: #666666;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.container > h3 {
+    color: var(--brown_primary);
+    font-weight: 400;
+    font-size: 2.4rem;
+}
+
+.subTopics_Wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+}
+
+.subTopics {
+    display: flex;
+    align-items: center;
+    grid-gap: .5rem;
+    font-size: 1.4rem;
+    color: rgb(207, 135, 22);
+}
+
+.subTopics > h5 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    color: #333;
+}
+
+  /* Small devices (landscape phone, )------------------
+  --------------------------- */
+  
+  @media (max-width: 767.98px) {
+    .container {
+        padding: 4rem 2rem;
+        grid-gap: 2rem;
+    }
+  }
+  
+  /* Small devices such as phone -------------------
+  -----------------------------------*/
+  
+  @media (max-width: 575.98px) {
+    .container {
+        padding: 4rem .5rem;
+        grid-gap: 2rem;
+    }    
+
+    .container > h3 {
+        font-size: 2rem;
+    }
+   }

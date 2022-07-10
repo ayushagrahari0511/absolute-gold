@@ -1,8 +1,14 @@
+import { useState } from 'react'
 import styles from './Header.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faMicrophone, faUserCog } from '@fortawesome/free-solid-svg-icons'
+import { FaRegUser, FaTimes } from 'react-icons/fa'
+import { AiOutlineMenu } from 'react-icons/ai'
+import Link from 'next/link'
+import {data} from '../../components/Home/Categories/data'
 
 const Header = ({ desc, img, title }) => {
+    const [toggleMenu, setToggleMenu] = useState(false)
     return (
         <div className={`registerHeader ${styles.wrapper}`}
             style={{
@@ -20,6 +26,20 @@ const Header = ({ desc, img, title }) => {
                             <FontAwesomeIcon icon={faMicrophone} className={styles.mike} />
                         </div>
                     </form>
+                    <div className={styles.login}>
+                        <Link href="/login">
+                            <span>
+                                <FaRegUser />
+                                <h5>
+                                    LOGIN
+                                </h5>
+                            </span>
+                        </Link>
+                        <div className={styles.menu} onClick={() => setToggleMenu(true)}>
+                            <AiOutlineMenu />
+                        </div>
+                    </div>
+
                 </div>
                 {
                     title ?
@@ -42,6 +62,26 @@ const Header = ({ desc, img, title }) => {
                         </div>
                 }
             </div>
+            <div className={toggleMenu ? `${styles.navigation} ${styles.active}` : styles.navigation}>
+                <div className={styles.cancel} onClick={() => setToggleMenu(false)}>
+                    <FaTimes />
+                </div>
+                <h4>
+                    <Link href="/home">
+                        Home
+                    </Link>
+                </h4>
+                {
+                    data.map((cat, i) => (
+                        <h4 key={i}>
+                            <Link href={`/category/${cat.title}`}>
+                                {cat.title}
+                            </Link>
+                        </h4>
+                    ))
+                }
+            </div>
+
         </div>
     )
 }
