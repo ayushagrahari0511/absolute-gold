@@ -1,0 +1,268 @@
+.container {
+    display: flex;
+    padding: 2.5rem 0;
+    flex-direction: column;
+    grid-gap: 3rem;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+    outline: none !important;  
+}
+
+.container table {
+    width: 100%;
+}
+
+.cart_wrapper {
+    margin-top: 4rem;
+    width: 100%;
+    display: block;
+    border: 1px solid #e5e5e5;
+    border-spacing: 0;
+}
+
+.cart_wrapper tr {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    border-bottom: 1px solid #e5e5e5;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    justify-items: center;
+}
+
+.cart_wrapper tr:last-child {
+    border-bottom: none;
+}
+
+.cart_header {
+    padding: 1rem 0 !important;
+    background: linear-gradient(#c87300, #e9ce66);
+    color: #fff;
+}
+
+.product_image {
+    display: flex;
+    align-items: center;
+    grid-gap: 1.5rem;
+}
+
+.img {
+    width: 11rem;
+    height: 12rem;
+    position: relative;
+    border: 1px solid #eeeeee;
+}
+
+.description h5 {
+    font-size: 1.2rem;
+    color: #333333;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.description h6 {
+    font-size: 1.3rem;
+    color: #999999;
+    font-weight: 400;
+}
+
+.price {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #999999;
+}
+
+.price span {
+    display: none;
+}
+
+.cancel button {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #999999;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.cancel button:hover {
+    color: #ff0000;
+}
+
+.cancel button h6 {
+    display: none;
+}
+
+.quantity {
+    border: 1px solid #999999;
+    display: flex;
+    font-size: 1.4rem;
+    align-items: center;
+    cursor: pointer;
+    grid-gap: 1rem;
+    padding: 0 1rem;
+}
+
+.quantity div {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.quantity h4 {
+    padding: .5rem 1.5rem;
+    border-left: 1px solid #999999;
+    font-size: 1.6rem;
+    color: #666666;
+    cursor: default;
+    font-weight: 600;
+    border-right: 1px solid #999999;
+}
+
+.proceed {
+    width: 100%;
+    display: flex;
+    margin: 1.5rem 0;
+    align-items: center;
+    justify-content: flex-end;
+    grid-gap: 2.5rem;
+}
+
+.proceed a {
+    color: #666666;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.proceed a:hover {
+    color: #999999;
+}
+
+.checkout {
+    border: 1px solid var(--brown_primary) !important;
+    cursor: pointer;
+    display: block;
+    color: #333333;
+    padding:.8rem 2.5rem;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+}
+
+.checkout:hover {
+    background: var(--brown_primary);
+    color: #fff;
+}
+
+
+/* for Medium devices such as tablets --------------
+---------------------*/
+@media (max-width: 991.98px) {
+
+    .cart_wrapper {
+        margin-top: 3rem;
+    }
+
+    .cart_wrapper tr {
+        grid-template-columns: 2.2fr 1fr 1fr 1fr .6fr;
+        padding-top: 3rem;
+        padding-bottom: 6rem;
+        justify-items: center;
+    }
+}
+
+/* Small devices (landscape phone, )------------------
+--------------------------- */
+
+@media (max-width: 767.98px) {
+    .cart_header {
+        display: none !important;
+    }
+
+    .cart_wrapper {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 2rem;
+    }
+
+    .cart_wrapper tr {
+        grid-template-columns: none;
+        justify-items: flex-start;
+        padding: 2rem;
+        grid-gap: 1rem;
+        border: 1px solid #e5e5e5 !important;
+    }
+
+    .product_image {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .img {
+        width: 18rem;
+        height: 19rem;
+    }
+    
+    .description h5 {
+        margin-top: 1rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+    
+    .description h6 {
+        font-size: 1.5rem;
+    }
+
+    .price span {
+        display: inline-block;
+        /* color: #333333; */
+        margin-right: .6rem;
+    }
+
+    .cancel button {
+        display: flex;
+        color: #fff;
+        grid-gap: .5rem;
+        align-items: center;
+        padding: .6rem 2rem;
+        border-radius: .4rem;
+        background: var(--brown_primary);
+    }
+    
+    .cancel button:hover {
+        color: #fff;
+        background: #8d591d;
+    }
+    
+    .cancel button h6 {
+        font-size: 1.4rem;
+        font-weight: 500;
+        display: block;
+    }
+}
+
+/* Small devices such as phone -------------------
+-----------------------------------*/
+
+@media (max-width: 575.98px) {
+    .img {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    .proceed {
+        grid-gap: 2rem;
+    }
+    
+    .checkout {
+        padding:.8rem 1.5rem;
+        text-align: center;
+    }
+ }

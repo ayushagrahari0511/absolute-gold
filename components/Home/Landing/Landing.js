@@ -13,6 +13,9 @@ const Landing = () => {
   return (
     <>
       <div className={styles.wrapper}>
+        <div className={styles.background_img}>
+            <Image src="/banner_img.webp" layout='fill' alt="absolute gold" />
+        </div>
         <div className={styles.container}>
           <header>
             <div className={styles.logo}>
@@ -46,7 +49,7 @@ const Landing = () => {
           <div className={styles.description}>
             <h1>ABSOLUTE GOLD</h1>
             <h3>IS YOUR QUEST FOR GOLD</h3>
-            <h5>A multi dimension B2B platform for Gold traders</h5>
+            <h5>A multi-dimensional B2B Trading platform , as the name implies, provides a single platform for Gold traders from Africa to get together to acquire and enjoy services or commodities.</h5>
             <Link href="/more">
               KNOW MORE
             </Link>

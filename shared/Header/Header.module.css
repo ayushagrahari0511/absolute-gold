@@ -6,6 +6,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+    outline: none !important;  
 }
 
 .container {
@@ -101,6 +104,97 @@
 
 .login span:hover h5 {
     color: var(--brown_primary);
+}
+
+/* When User is logged in --------------------
+------------------ */
+.left_icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #dfd0b1;
+    font-size: 2rem;
+}
+
+.left_icon > span {
+    display: block;
+    width: 2px;
+    height: 1.5rem;
+    margin-right: 1.5rem;
+    margin-left: .5rem;
+    background: #dfd0b1;
+}
+
+.cog {
+    cursor: pointer;
+}
+
+.cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cart > span {
+    position: absolute;
+    top: -1.5rem;
+    right: -1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 50%;
+    color: #fff;
+    background: #e3be54;
+    z-index: 2;
+}
+
+.cog:hover ~ .user_setting {
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.user_setting:hover {
+    display: block;
+}
+
+.user_setting {
+    top: 2rem;
+    position: absolute;
+    display: none;
+    left: -50%;
+    width: 18rem;
+    border-radius: .3rem;
+    background: var(--brown_primary);
+    transition: all 0.5s ease;
+}
+
+.user_setting h4 {
+    cursor: pointer;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    grid-gap: .5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.user_setting h4:hover {
+    background-color: #e9ce66;
+    color: var(--brown_primary);
+}
+
+.user_setting_icon {
+    color: #dfd0b1;
+    font-size: 1.2rem;
 }
 
 .menu {
@@ -243,12 +337,27 @@
     .my_account > .title i {
         font-size: 2.8rem;
     }
+
+    /* -----------------
+    ------------ */
+    .user_setting {
+        left: -100%;
+    }
 }
 
 @media (max-width: 575.98px) {
     .wrapper {
         height: 35vh;
         background-size: 120% 100% !important;
+    }
+
+    .searchInput {
+        display: flex;
+        margin-top: 1rem;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        grid-gap: 1rem;
+        margin-right: 0;
     }
 
     .search_container > input {
@@ -261,4 +370,7 @@
         margin-bottom: 1rem;
     }
     
+    .user_setting {
+        left: -120%;
+    }
  }

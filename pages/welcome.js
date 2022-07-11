@@ -18,6 +18,9 @@ const Welcome = () => {
       </Head>
       <RouteChange>
         <div className={styles.wrapper}>
+          <div className={styles.background_img}>
+            <Image src="/banner_img-2.webp" layout='fill' alt="absolute gold" />
+          </div>
           <header>
             <Link href="/register">
               <div className={styles.skip}>

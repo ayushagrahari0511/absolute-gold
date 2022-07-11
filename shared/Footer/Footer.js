@@ -24,7 +24,7 @@ const Footer = () => {
                             <Link href="/privacy_policy">
                                 Privacy Policy
                             </Link>
-                            <Link href="/my-account">
+                            <Link href="/my_account">
                                 My Account
                             </Link>
                         </ul>
@@ -41,10 +41,10 @@ const Footer = () => {
                             <Link href="/wishlist">
                                 My Wishlist
                             </Link>
-                            <Link href="/check-out">
+                            <Link href="/checkout">
                                 Check out
                             </Link>
-                            <Link href="/track-order">
+                            <Link href="/trackOrder">
                                 Track My Order
                             </Link>
                         </ul>
@@ -61,7 +61,7 @@ const Footer = () => {
                             <Link href="/sitemap">
                                 Sitemap
                             </Link>
-                            <Link href="/my-account">
+                            <Link href="/my_account">
                                 My Account
                             </Link>
                             <Link href="/admin/dashboard">
