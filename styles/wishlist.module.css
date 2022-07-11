@@ -73,10 +73,32 @@
     color: #999999;
 }
 
+.outofStock {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ff6161;
+}
+
 .price span {
     display: none;
 }
 
+.addtoCart button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 1rem 2rem;
+    border-radius: .4rem;
+    background: var(--brown_primary);
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.addtoCart button:hover {
+    background: #E9CE66;
+}
 .cancel button {
     font-size: 2rem;
     font-weight: 600;
@@ -170,7 +192,7 @@
     }
 
     .cart_wrapper tr {
-        grid-template-columns: 2.2fr 1fr 1fr 1fr .6fr;
+        grid-template-columns: 2.2fr 1fr 1fr 1fr .5fr;
         padding-top: 3rem;
         padding-bottom: 6rem;
         justify-items: center;
@@ -226,7 +248,19 @@
         margin-right: .6rem;
     }
 
+    .addtoCart {
+        width: 100%;
+    }
+
+    .addtoCart button {
+        width: 70%;
+    }
+
+    .cancel {
+        width: 35%;
+    }
     .cancel button {
+        width: 100%;
         display: flex;
         color: #fff;
         grid-gap: .5rem;
@@ -259,6 +293,18 @@
 
     .proceed {
         grid-gap: 2rem;
+    }
+
+    .addtoCart {
+        width: 100%;
+    }
+
+    .addtoCart button {
+        width: 100%;
+    }
+
+    .cancel {
+        width: 50%;
     }
     
     .checkout {

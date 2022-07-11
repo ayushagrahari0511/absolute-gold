@@ -1,0 +1,238 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    grid-gap: 4rem;   
+}
+
+.fill_form {
+    width: 100%;
+    display: grid;
+    margin-top: 7rem;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+}
+
+.form {
+    width: 100%;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1.5rem;
+}
+
+.form_header {
+    font-size: 2.4rem;
+    font-weight: 700;
+    padding: 2rem 0;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+.form_header::after {
+    content: '';
+    display: block;
+    width: 10rem;
+    margin-top: 1rem;
+    border-radius: 4rem;
+    height: .5rem;
+    background: #D18B27;
+}
+
+.form form > input ,
+.form form > select {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #999999;
+    height: 4rem;
+    background: #fff;
+    border: 1px solid #999999;
+    padding: .4rem 1.5rem;
+    outline: none;
+} 
+
+.form form > select {
+    appearance: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.form form > input::-webkit-outer-spin-button,
+.form form > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.form form > input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form form > textarea {
+    border: 1px solid #999999;
+    height: 11rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+    color: #999999;
+    resize: none;
+}
+
+.customerAddress {
+    width: fit-content;
+    background: var(--brown_primary);
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: .4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.customerAddress:hover {
+    background: #E9CE66;
+}
+
+/* Orders Info starts here-------------------
+-------------------- */
+
+.orders {
+    flex-direction: column;
+    display: flex;
+    grid-gap: 1.5rem;
+}
+
+.orders_wrapper {
+    border: 1px solid #cccccc;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2rem;
+}
+
+.orders_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+.orders_title.active {
+    border-bottom: none !important;
+    border-top: 1px solid #cccccc;
+    padding: 1rem 0;
+}
+
+.orders_title > h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333333;
+}
+
+.orders_details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    grid-gap: 2rem;
+}
+
+.order_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order_info > div > h5{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #333333;
+}
+
+.order_info > div > h6 {
+    font-size: 1.4rem;
+    margin-top: .5rem;
+    font-weight: 400;
+    color: #999999;
+}
+
+.order_info > h5 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #999999;
+}
+
+.place_order {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    grid-gap: 2rem;
+}
+
+.place_order > div {
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+}
+
+.place_order > div > label {
+    font-size: 1.4rem ;
+    font-weight: 600;
+    color: #333333;
+}
+
+.orders_wrapper > button {
+    background: var(--brown_primary);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: .4rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.orders_wrapper > button:hover {
+    background: #E9CE66;
+}
+
+/* for Medium devices such as tablets --------------
+---------------------*/
+@media (max-width: 991.98px) {
+    .fill_form {
+        margin-top: 1rem;
+        grid-gap: 3rem;
+    }
+
+    .orders_wrapper {
+        padding: 4rem 2rem;
+        grid-gap: 2rem;
+    }
+  }
+  
+  /* Small devices (landscape phone, )------------------
+  --------------------------- */
+  
+  @media (max-width: 767.98px) {
+    .fill_form {
+        display: flex;
+        flex-direction: column-reverse;
+        grid-gap: 3rem;
+    }
+
+    .orders_wrapper {
+        padding: 4rem 2rem;
+        grid-gap: 2rem;
+    }
+  }
+  
+  /* Small devices such as phone -------------------
+  -----------------------------------*/
+  
+  @media (max-width: 575.98px) {
+    .container {
+        padding: 4rem 0rem;
+    }
+   }
