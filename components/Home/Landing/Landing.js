@@ -14,7 +14,7 @@ const Landing = () => {
     <>
       <div className={styles.wrapper}>
         <div className={styles.background_img}>
-            <Image src="/banner_img.webp" layout='fill' alt="absolute gold" />
+            <img src="/banner_img.webp" alt="absolute gold" />
         </div>
         <div className={styles.container}>
           <header>

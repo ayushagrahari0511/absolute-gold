@@ -126,8 +126,9 @@
 
 @media (max-width: 575.98px) {
     .background_img {
-        width: 200%;
+        width: 250%;
         height: 103vh;
+        left: -5rem ;
     }
 
     .background_img::after {
@@ -137,7 +138,6 @@
         height: 100vh;
         z-index: 2;
         display: block;
-        background: rgba(0, 0, 0, 0.1);
     }
 
     .wrapper>header {

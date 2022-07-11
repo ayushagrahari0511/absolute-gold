@@ -264,7 +264,7 @@
 }
 
 .my_account p {
-    width: 50%;
+    width: 60%;
     color: #fff;
 }
 
@@ -318,6 +318,10 @@
     .search_container {
         grid-gap: 1rem;
     }
+
+    .my_account p {
+        width: 65%;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -330,7 +334,7 @@
     }
     
     .my_account > .title h1 {
-        width: 70%;
+        width: 80%;
         font-size: 2.8rem;
     }
 
@@ -347,7 +351,7 @@
 
 @media (max-width: 575.98px) {
     .wrapper {
-        height: 35vh;
+        height: 40vh;
         background-size: 120% 100% !important;
     }
 
@@ -369,7 +373,13 @@
         grid-gap: 0rem;
         margin-bottom: 1rem;
     }
+
+    .my_account > .title h1 {
+        width: 80%;
+        font-size: 2.4rem;
+    }
     
+    .my_account 
     .user_setting {
         left: -120%;
     }
