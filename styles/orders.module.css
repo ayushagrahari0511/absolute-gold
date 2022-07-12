@@ -1,0 +1,241 @@
+.container {
+    display: flex;
+    padding: 3rem 4rem;
+    flex-direction: column;
+    grid-gap: 3rem;
+}
+
+.isActive {
+    background: linear-gradient(#c87300, #e9ce66);
+    background: -webkit-linear-gradient(#c87300, #e9ce66);
+    color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+}
+
+.order_wrapper {
+    width: 100%;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 9rem;
+}
+
+
+/* -------Meta container starts here-----------
+------------------ */
+.order_meta_info {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 2rem;
+    justify-content: space-between  ;
+}
+
+.meta_container {
+    flex-grow: 1;
+    border: 1px solid #cccccc;
+    display: flex;
+    padding: 4rem 3rem;
+    flex-direction: column;
+    grid-gap: 1.5rem;
+    align-items: center;
+    border-radius: .3rem;
+    justify-content: center;
+}
+
+.meta_container > h4 {
+    font-weight: 700;   
+    color: #333333;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.meta_container > h5 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+/* Orders description starts here---------------
+-------------------- */
+
+.order_description {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 9rem;
+}
+
+.form_header {
+    font-size: 2.4rem;
+    font-weight: 700;
+    padding: 2rem 0;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+.form_header::after {
+    content: '';
+    display: block;
+    width: 10rem;
+    margin-top: 1rem;
+    border-radius: 4rem;
+    height: .5rem;
+    background: #D18B27;
+}
+
+/* Your order section starts here---------------
+---------------------- */
+
+.orders_wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2rem;
+}
+
+.orders_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+.orders_title.active {
+    border-bottom: none !important;
+    border-top: 1px solid #cccccc;
+    padding: 1rem 0;
+}
+
+.orders_title > h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333333;
+}
+
+.orders_details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    grid-gap: 2rem;
+}
+
+.order_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order_info > div > h5{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #333333;
+}
+
+.order_info > div > h6 {
+    font-size: 1.4rem;
+    margin-top: .5rem;
+    font-weight: 400;
+    color: #999999;
+}
+
+.order_info > h5 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #999999;
+}
+
+/* Billing details section starts here------------
+------------------------- */
+
+.order_address {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.order_billing > p {
+    width: 26rem;
+    line-height: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #666666;
+}
+
+.order_billing > div > h5 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: .5rem;
+}
+
+.customer_info {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-left: .5rem;
+    color: #333333;
+}
+
+
+
+@media (max-width: 1199.98px) {
+    .order_address {
+        grid-gap: 0rem;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* for Medium devices such as tablets --------------
+---------------------*/
+@media (max-width: 991.98px) {
+    .order_wrapper {
+        grid-gap: 4rem;
+        padding: 1rem 0;
+    }
+
+    .order_description {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 4rem;
+    }    
+
+    .order_address {
+        grid-gap: 2rem;
+        flex-wrap: wrap;
+    }
+}
+
+/* Small devices (landscape phone, )------------------
+--------------------------- */
+
+@media (max-width: 767.98px) {
+    .order_wrapper {
+        grid-gap: 3rem;
+        padding: 0rem 0;
+    }
+
+}
+
+/* Small devices such as phone -------------------
+-----------------------------------*/
+
+@media (max-width: 575.98px) {
+    .container {
+        padding: 3rem 0rem;
+        grid-gap: 3rem;
+    }
+
+    .isActive {
+        font-size: 1.4rem;
+        padding: .5rem 1rem;
+    }
+
+    .order_meta_info {
+        grid-gap: 1rem;
+    }
+ }

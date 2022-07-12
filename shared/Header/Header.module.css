@@ -352,7 +352,8 @@
 @media (max-width: 575.98px) {
     .wrapper {
         height: 40vh;
-        background-size: 120% 100% !important;
+        background-size: 170% 100% !important;
+        background-position: top 0 right 40% !important;
     }
 
     .searchInput {
