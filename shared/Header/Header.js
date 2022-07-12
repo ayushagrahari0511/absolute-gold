@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faMicrophone, faUserCog } from '@fortawesome/free-solid-svg-icons'
 import { FaRegUser, FaUserAlt, FaTimes, FaCog, FaHeart } from 'react-icons/fa'
 import { RiShoppingBag3Fill } from 'react-icons/ri'
-import {IoBag} from 'react-icons/io5'
-import {CgDollar} from 'react-icons/cg'
+import { IoBag } from 'react-icons/io5'
+import { CgDollar } from 'react-icons/cg'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { IoCart } from 'react-icons/io5'
 import Link from 'next/link'
@@ -17,6 +17,8 @@ const cart = "03"
 
 const Header = ({ desc, img, title }) => {
     const [toggleMenu, setToggleMenu] = useState(false)
+    const [toggleSearch, setToggleSearch] = useState(false)
+
     return (
         <div className={`registerHeader ${styles.wrapper}`}
             style={{
@@ -25,7 +27,9 @@ const Header = ({ desc, img, title }) => {
         >
             <div className={styles.container}>
                 <div className={styles.searchInput}>
-                    <form className={styles.search_container}>
+                    <form
+                        onClick={() => setToggleSearch(true)}
+                        className={styles.search_container}>
                         <label htmlFor="search">
                             <FontAwesomeIcon icon={faSearch} className={styles.search} />
                         </label>
@@ -50,31 +54,31 @@ const Header = ({ desc, img, title }) => {
                                 <div className={styles.user_setting}>
                                     <Link href="/my_account">
                                         <h4>
-                                            <FaUserAlt className={styles.user_setting_icon}/>
+                                            <FaUserAlt className={styles.user_setting_icon} />
                                             MY ACCOUNT
                                         </h4>
                                     </Link>
                                     <Link href="/cart">
                                         <h4>
-                                            <IoCart className={styles.user_setting_icon}/>
+                                            <IoCart className={styles.user_setting_icon} />
                                             MY CART
                                         </h4>
                                     </Link>
                                     <Link href="/wishlist">
                                         <h4>
-                                            <FaHeart className={styles.user_setting_icon}/>
+                                            <FaHeart className={styles.user_setting_icon} />
                                             MY WISHLIST
                                         </h4>
                                     </Link>
                                     <Link href="/checkout">
                                         <h4>
-                                            <CgDollar className={styles.user_setting_icon}/>
+                                            <CgDollar className={styles.user_setting_icon} />
                                             CHECK OUT
                                         </h4>
                                     </Link>
                                     <Link href="/orders">
                                         <h4>
-                                            <RiShoppingBag3Fill className={styles.user_setting_icon}/>
+                                            <RiShoppingBag3Fill className={styles.user_setting_icon} />
                                             ORDER COMPLETE
                                         </h4>
                                     </Link>
@@ -118,6 +122,22 @@ const Header = ({ desc, img, title }) => {
                         </div>
                 }
             </div>
+            <form
+                onClick={() => setToggleSearch(true)}
+                className={toggleSearch ? `${styles.dragSearch} ${styles.active}` : styles.dragSearch}>
+                <label htmlFor="search">
+                    <FontAwesomeIcon icon={faSearch} className={styles.search} />
+                </label>
+                <input type="text" id='search' placeholder='Search topics or keyword' />
+                <div className={styles.microphone}>
+                    <FontAwesomeIcon icon={faMicrophone} className={styles.mike} />
+                </div>
+            </form>
+            <div
+                onClick={() => setToggleSearch(false)}
+                className={toggleSearch ? `${styles.toggleSearch} ${styles.active}` : styles.toggleSearch}>
+            </div>
+
             <div className={toggleMenu ? `${styles.navigation} ${styles.active}` : styles.navigation}>
                 <div className={styles.cancel} onClick={() => setToggleMenu(false)}>
                     <FaTimes />
