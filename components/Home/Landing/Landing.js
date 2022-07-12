@@ -10,11 +10,12 @@ import { data } from '../Categories/data'
 
 const Landing = () => {
   const [toggleMenu, setToggleMenu] = useState(false)
+  const [toggleSearch, setToggleSearch] = useState(false)
   return (
     <>
       <div className={styles.wrapper}>
         <div className={styles.background_img}>
-            <img src="/banner_img.webp" alt="absolute gold" />
+          <img src="/banner_img.webp" alt="absolute gold" />
         </div>
         <div className={styles.container}>
           <header>
@@ -22,7 +23,9 @@ const Landing = () => {
               <Image src="/logo.png" width={100} height={100} alt="" />
             </div>
             <div className={styles.links}>
-              <form className={styles.search_container}>
+              <form
+                onClick={() => setToggleSearch(true)}
+                className={styles.search_container}>
                 <label htmlFor="search">
                   <FontAwesomeIcon icon={faSearch} className={styles.search} />
                 </label>
@@ -54,6 +57,21 @@ const Landing = () => {
               KNOW MORE
             </Link>
           </div>
+        </div>
+        <form
+          onClick={() => setToggleSearch(true)}
+          className={toggleSearch ? `${styles.dragSearch} ${styles.active}` :styles.dragSearch}>
+          <label htmlFor="search">
+            <FontAwesomeIcon icon={faSearch} className={styles.search} />
+          </label>
+          <input type="text" id='search' placeholder='Search topics or keyword' />
+          <div className={styles.microphone}>
+            <FontAwesomeIcon icon={faMicrophone} className={styles.mike} />
+          </div>
+        </form>
+        <div
+          onClick={() => setToggleSearch(false)}
+          className={toggleSearch ? `${styles.toggleSearch} ${styles.active}` : styles.toggleSearch}>
         </div>
         <div className={toggleMenu ? `${styles.navigation} ${styles.active}` : styles.navigation}>
           <div className={styles.cancel} onClick={() => setToggleMenu(false)}>

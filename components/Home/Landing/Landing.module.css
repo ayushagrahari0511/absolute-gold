@@ -144,6 +144,21 @@
     -webkit-text-fill-color: transparent;
 }
 
+/* ----------------------------- */
+/* ---------------- */
+.dragSearch {
+    display: none;
+}
+
+.dragSearch.active {
+    display: none;
+}
+
+.toggleSearch {
+    display: none;
+    transition: all 0.3s ease;
+}
+
 .search_container {
     background: #fff;
     padding: .7rem 1rem;
@@ -199,8 +214,8 @@
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
-
     align-self: flex-end;
+    align-items: flex-end;
     text-align: left;
 }
 
@@ -218,6 +233,7 @@
 
 .description > h5 {
     font-weight: 400;
+    text-align: end;
     font-size: 1.6rem;
     color: var(--brown_tertiary);
 }
@@ -259,8 +275,7 @@
 /* for Medium devices such as tablets */
 @media (max-width: 991.98px) {
     .links {
-        flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         grid-gap: 1rem;
     }
     .container {
@@ -325,26 +340,121 @@
 
 @media (max-width: 575.98px) {
     .wrapper {
-        height: 65vh;
+        height: 70vh;
     }
     .container {
         padding: 1rem .5rem;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .container > header {
+        align-items: center;
     }
 
     .background_img {
-        width: 160%;
-        height: 65vh;
-        left: 0;
+        width: 220%;
+        height: 70vh;
+        left: -40%;
     }
+
+
     .logo img {
         top: 0rem !important;
     }
+
+    .search_container {
+        width: 2.8rem;
+        height: 2.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #dfd0b1;
+    }
+
     .search_container > input {
         width: 16rem;
+        display: none;
         font-size: 1.4rem;
+    }
+
+    .search {
+        color: var(--brown_primary);
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .microphone {
+        display: none;
+    }
+
+    .toggleSearch {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .toggleSearch.active {
+        height: 100vh;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.8);
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* ----------------
+    -------------- */
+
+    .dragSearch.active {
+        position: fixed;
+        background: #fff;
+        top: 3rem;
+        margin-top: ;
+        padding: .7rem 1rem;
+        border-radius: 4rem;
+        display: flex;        /* align-items: center; */
+        grid-gap: 2rem;
+        z-index: 3;
+    }
+    
+    .dragSearch.active label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .dragSearch.active > input {
+        border: none;
+        outline: none;
+        font-size: 1.5rem;
+        color: var(--black_secondary);
+    }
+    
+    .dragSearch.active > input::placeholder {
+        color: var(--black_secondary);
+    }
+    
+    .dragSearch.active .search {
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+        color: var(--button_background);
+    }
+    
+    .dragSearch.active .microphone {
+        display: flex;
+        align-items: center;
+        background: var(--button_background);
+        border-radius: 50%;
+        padding: .8rem;
+    }
+    
+    .login {
+        top: 0;
     }
 
     .description {
@@ -354,19 +464,19 @@
     }
 
     .description > h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
         line-height: 3.8rem;
         margin-bottom: .5rem;
     }
     
     .description > h3 {
-        line-height: 3rem;
+        line-height: 2.5rem;
         margin: .5rem 0;
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     
     .description > h5 {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         line-height: 2rem;
     }
  }
