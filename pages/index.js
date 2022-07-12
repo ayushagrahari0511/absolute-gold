@@ -26,7 +26,7 @@ export default function Home() {
               loop
               muted
               ref={videoRef}
-              src="/B2BGold.mp4"
+              src="https://absolute-gold-backend.herokuapp.com/assets/video"
               playsInline>
               <source src="/B2BGold.webm" type="video/webm" />
             </video>
