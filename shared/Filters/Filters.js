@@ -2,6 +2,8 @@ import { useState } from 'react'
 import styles from './Filters.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faShare, faSearch, faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import {IoFilter} from 'react-icons/io5'
+import {BsFilterLeft} from 'react-icons/bs'
 
 const Filters = () => {
     const [priceFrom, setPriceFrom] = useState(0);
@@ -16,8 +18,7 @@ const Filters = () => {
                     onClick={() => setIsMenu(false)}
                     className={styles.faBars} />
                     :
-                    <FontAwesomeIcon
-                        icon={faBars}
+                    <BsFilterLeft
                         onClick={() => setIsMenu(true)}
                         className={styles.faBars} />
             }

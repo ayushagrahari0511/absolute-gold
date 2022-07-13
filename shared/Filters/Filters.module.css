@@ -321,6 +321,10 @@
 /* for Medium devices such as tablets --------------
   ---------------------*/
 @media (max-width: 991.98px) {
+  .container {
+    width: 30rem;
+  }
+
   .filters {
     height: 100vh;
    position: fixed; 
@@ -353,17 +357,23 @@
   
   .faBars {
     display: block;
-    width: 2.5rem;
+    width: 4rem;
+    font-size: 4rem;
     cursor: pointer;
-    height: 2.5rem;
+    height: 4rem;
     color: var(--brown_primary);
+    margin-bottom: 1rem;
   }  
 }
 
 /* Small devices (landscape phone, )------------------
   --------------------------- */
 
-@media (max-width: 767.98px) {}
+@media (max-width: 767.98px) {
+  .container {
+    width: 27rem;
+  }
+}
 
 /* Small devices such as phone -------------------
   -----------------------------------*/
