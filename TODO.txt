@@ -10,6 +10,7 @@ Functional Scope :
 /TODO: create product category
 
 
+
 Store front -
 /TODO: Too selling products
 /TODO: Search
@@ -40,11 +41,15 @@ Seller Module -
 /TODO: address
 
 
+
+
+
+
+
 2. The Cart
 /TODO: The cart will display all the selected Items which are being selected by the Buyer
 /TODO: System will allow the buyer to remove item/s from the cart
 /TODO: System will also allow it to close the Cart and go to paymet
-
 
 3. Order Placement Screen
 /TODO: On clicking the "Place Order" button from the Cart this form will be opened
@@ -54,6 +59,10 @@ pre populated. However, the system will allow the user to edit the information.
 /TODO: Finally on clicking the "Place Order" button an unique Order Number will be generated
 and order will be saved and data will be stored in the DB.
 /TODO: System will send emails to 1) Admin 2) Seller 3) Buyer
+
+
+
+
 
 
 4) Payment Gateway

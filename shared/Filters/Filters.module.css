@@ -378,4 +378,14 @@
 /* Small devices such as phone -------------------
   -----------------------------------*/
 
-@media (max-width: 575.98px) {}
+@media (max-width: 575.98px) {
+  .container {
+    width: 27rem;
+  }
+}
+
+@media (max-width: 299px) {
+  .container {
+    width: 24rem;
+  }
+}
