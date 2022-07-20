@@ -31,8 +31,8 @@ Seller Module -
 
 
 1. Buyer module -
-/TODO: Creating Buyer Profile
-/TODO: Select product/s
+/DONE: Creating Buyer Profile
+/DONE: Select product/s
 /TODO: Add to cart
 /TODO: Can select shipping
 /TODO: Product feedback

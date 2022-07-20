@@ -5,6 +5,15 @@
     justify-content: center;
 }
 
+.favoratesnackbarAdded {
+    padding: 1rem 3rem;
+    color: #fff !important;
+    font-size: 1.2rem;
+    border-radius: .3rem;
+    background: var(--brown_primary) !important;
+}
+
+
 .container {
     padding: 2rem 0;
     width: 90%;
@@ -76,6 +85,7 @@
     grid-gap: .5rem;
 }
 
+
 .input label {
     color: #333;
     font-size: 1.4rem;
@@ -90,6 +100,12 @@
     padding: 1rem;
     font-size: 1.4rem;
     color: #1b1919;
+}
+
+.input span {
+    font-size: 1.1rem;
+    padding: .3rem;
+    color: red;
 }
 
 .input input::-webkit-outer-spin-button,
@@ -141,6 +157,9 @@
     color: var(--brown_primary);
     font-weight: 500;
     font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 2px solid var(--brown_primary);
     padding: 1.4rem 0;
     cursor: pointer;
@@ -150,6 +169,31 @@
 .button:hover {
     background: var(--brown_primary);
     color: #fff;
+}
+
+.loader {
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    border-top: 4px solid var(--brown_primary);
+    border-left: 4px solid var(--brown_primary);
+    animation: loader .8s infinite ease-in;
+}
+
+.button:hover .loader {
+    border-top: 4px solid #fff;
+    border-left: 4px solid #fff;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .right {
@@ -245,21 +289,21 @@
 /* Small devices such as phone */
 
 @media (max-width: 575.98px) {
-  .body {
-    display: flex;
-    flex-direction: column;
-    grid-gap: 1rem;
-}
+    .body {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 1rem;
+    }
 
-.left {
-    padding: 2rem .5rem;
-    border: none;
-    border-bottom: 1px solid #e5e5e5;
-    grid-gap: 2rem;
-}
+    .left {
+        padding: 2rem .5rem;
+        border: none;
+        border-bottom: 1px solid #e5e5e5;
+        grid-gap: 2rem;
+    }
 
-.right {
-    padding: 2rem .5rem;
-    grid-gap: 1rem;
+    .right {
+        padding: 2rem .5rem;
+        grid-gap: 1rem;
+    }
 }
- }

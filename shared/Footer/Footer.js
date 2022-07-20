@@ -1,10 +1,12 @@
 import styles from './Footer.module.css'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useSelector } from 'react-redux'
 import { faPhoneAlt, faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 
 const Footer = () => {
+    const { user } = useSelector(state => state.auth)
     return (
         <div className={styles.wrapper}>
             <div className={styles.container}>
@@ -32,9 +34,13 @@ const Footer = () => {
                     <div className={styles.list}>
                         <h4>MY ACCOUNT</h4>
                         <ul className={styles.links}>
-                            <Link href="/login">
-                                Sign In
-                            </Link>
+                            {
+                                user ? <></>
+                                    :
+                                    <Link href="/login">
+                                        Sign In
+                                    </Link>
+                            }
                             <Link href="/cart">
                                 View Cart
                             </Link>
@@ -64,9 +70,14 @@ const Footer = () => {
                             <Link href="/my_account">
                                 My Account
                             </Link>
-                            <Link href="/admin/dashboard">
-                                Admin
-                            </Link>
+                            {
+                                user?.role === "admin" ?
+                                    <Link href="/admin/dashboard">
+                                        Admin
+                                    </Link>
+                                    :
+                                    <></>
+                            }
                         </ul>
                     </div>
                     <div className={styles.list}>

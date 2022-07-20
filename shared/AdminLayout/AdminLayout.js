@@ -11,16 +11,19 @@ import { BsListTask, BsPinAngle } from 'react-icons/bs'
 import { FaRegUser, FaAngleRight, FaDotCircle } from 'react-icons/fa'
 import { ImLink } from 'react-icons/im'
 import Router, { useRouter } from 'next/router'
+import { useSelector } from 'react-redux'
 import Image from 'next/image'
 import Link from 'next/link'
 import Loader from '../Loader/Loader'
 
 const AdminLayout = ({ children }) => {
+  const {user} = useSelector(state => state.auth)
   const [link, setLink] = useState("");
   const [toggleMenu, setToggleMenu] = useState(false)
   const [dropDown, setDropDown] = useState(false)
   const router = useRouter()
   const [loading, setLoading] = useState(false)
+  const [isAuthorize, setIsAuthorize] = useState(false)
   Router.events.on("routeChangeStart", (url) => {
     setLoading(true)
   })

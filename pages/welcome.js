@@ -6,10 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHandPointRight } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
 import Image from 'next/image'
+import { useSelector } from 'react-redux'
 import RouteChange from '../shared/RouteChange'
 
 
 const Welcome = () => {
+  const { user } = useSelector(state => state.auth)
   return (
     <>
       <Head>
@@ -22,18 +24,31 @@ const Welcome = () => {
             <Image src="/banner_img-2.webp" layout='fill' alt="absolute gold" />
           </div>
           <header>
-            <Link href="/register">
-              <div className={styles.skip}>
-                <FontAwesomeIcon icon={faUser} className={styles.userIcon} />
-                Register/login
-              </div>
-            </Link>
-            <Link href="/home">
-              <div className={styles.skip}>
-                SKIP
-                <FontAwesomeIcon icon={faHandPointRight} className={styles.skipIcon} />
-              </div>
-            </Link>
+            {
+              user ? <>
+                <Link href="/home">
+                  <div className={styles.skip}>
+                    SKIP
+                    <FontAwesomeIcon icon={faHandPointRight} className={styles.skipIcon} />
+                  </div>
+                </Link>
+              </>
+                :
+                <>
+                  <Link href="/register">
+                    <div className={styles.skip}>
+                      <FontAwesomeIcon icon={faUser} className={styles.userIcon} />
+                      Register/login
+                    </div>
+                  </Link>
+                  <Link href="/home">
+                    <div className={styles.skip}>
+                      SKIP
+                      <FontAwesomeIcon icon={faHandPointRight} className={styles.skipIcon} />
+                    </div>
+                  </Link>
+                </>
+            }
             <Image src="/logo.png" alt="logo" width={200} height={200} />
           </header>
           <div className={styles.desc}>

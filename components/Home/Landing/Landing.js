@@ -3,14 +3,41 @@ import styles from './Landing.module.css'
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faMicrophone, faUser } from '@fortawesome/free-solid-svg-icons'
-import { FaRegUser, FaTimes } from 'react-icons/fa'
+import { FaRegUser, FaUserAlt, FaTimes, FaCog, FaHeart } from 'react-icons/fa'
 import { AiOutlineMenu } from 'react-icons/ai'
 import Image from 'next/image'
+import {useRouter} from 'next/router'
+import { IoCart } from 'react-icons/io5'
+import axios from 'axios'
+import { CgDollar } from 'react-icons/cg'
+import { RiShoppingBag3Fill, RiLogoutCircleLine } from 'react-icons/ri'
 import { data } from '../Categories/data'
+import { useSelector } from 'react-redux'
+
+const cart = "03"
 
 const Landing = () => {
+  const router = useRouter()
+  const { user } = useSelector(state => state.auth)
   const [toggleMenu, setToggleMenu] = useState(false)
   const [toggleSearch, setToggleSearch] = useState(false)
+
+  // Logout user-------------------
+  // -------------------------
+  const handleLogout = async () => {
+    const config = {
+      WithCredentials: true,
+      Credentials: 'include'
+    };
+    const {data} = await axios.get(`${process.env.BASEURL}/api/logout`, {
+      withCredentials: true,
+      credentials: 'include'
+})
+
+    if(data) {
+      router.reload('/home')
+    }
+  }
   return (
     <>
       <div className={styles.wrapper}>
@@ -35,14 +62,67 @@ const Landing = () => {
                 </div>
               </form>
               <div className={styles.login}>
-                <Link href="/login">
-                  <span>
-                    <FaRegUser />
-                    <h5>
-                      LOGIN
-                    </h5>
-                  </span>
-                </Link>
+                {
+                  user ? <div className={styles.left_icon}>
+                    <FaCog className={styles.cog} />
+                    <span></span>
+                    <Link href="/cart">
+                      <div className={cart ? `${styles.cart} ${styles.active}` : styles.cart} >
+                        <IoCart />
+                        {
+                          cart && <span>{cart}</span>
+                        }
+                      </div>
+                    </Link>
+                    <div className={styles.user_setting}>
+                      <Link href="/my_account">
+                        <h4>
+                          <FaUserAlt className={styles.user_setting_icon} />
+                          MY ACCOUNT
+                        </h4>
+                      </Link>
+                      <Link href="/cart">
+                        <h4>
+                          <IoCart className={styles.user_setting_icon} />
+                          MY CART
+                        </h4>
+                      </Link>
+                      <Link href="/wishlist">
+                        <h4>
+                          <FaHeart className={styles.user_setting_icon} />
+                          MY WISHLIST
+                        </h4>
+                      </Link>
+                      <Link href="/checkout">
+                        <h4>
+                          <CgDollar className={styles.user_setting_icon} />
+                          CHECK OUT
+                        </h4>
+                      </Link>
+                      <Link href="/orders">
+                        <h4>
+                          <RiShoppingBag3Fill className={styles.user_setting_icon} />
+                          ORDER COMPLETE
+                        </h4>
+                      </Link>
+                      <div onClick={handleLogout}>
+                        <h4>
+                          <RiLogoutCircleLine className={styles.user_setting_icon} />
+                          LOGOUT
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                    :
+                    <Link href="/login">
+                      <span>
+                        <FaRegUser />
+                        <h5>
+                          LOGIN
+                        </h5>
+                      </span>
+                    </Link>
+                }
                 <div className={styles.menu} onClick={() => setToggleMenu(true)}>
                   <AiOutlineMenu />
                 </div>
@@ -60,7 +140,7 @@ const Landing = () => {
         </div>
         <form
           onClick={() => setToggleSearch(true)}
-          className={toggleSearch ? `${styles.dragSearch} ${styles.active}` :styles.dragSearch}>
+          className={toggleSearch ? `${styles.dragSearch} ${styles.active}` : styles.dragSearch}>
           <label htmlFor="search">
             <FontAwesomeIcon icon={faSearch} className={styles.search} />
           </label>
