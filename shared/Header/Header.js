@@ -35,7 +35,7 @@ const Header = ({ desc, img, title }) => {
         })
 
         if (data) {
-            router.reload('/home')
+            router.reload()
         }
     }
 
