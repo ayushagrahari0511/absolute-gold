@@ -34,9 +34,9 @@ const Header = ({ desc, img, title }) => {
             credentials: 'include'
         })
 
-        if (data) {
-            router.reload()
-        }
+        // if (data) {
+        //     router.reload()
+        // }
     }
 
     return (
