@@ -30,7 +30,6 @@ const Header = ({ desc, img, title }) => {
             Credentials: 'include'
         };
         const { data } = await axios.get(`${process.env.BASEURL}/api/logout`, {
-            withCredentials: true,
             credentials: 'include'
         })
 
