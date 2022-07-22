@@ -25,17 +25,18 @@ const Header = ({ desc, img, title }) => {
     // Logout user-------------------
     // -------------------------
     const handleLogout = async () => {
-        const config = {
-            WithCredentials: true,
-            Credentials: 'include'
-        };
-        const { data } = await axios.get(`${process.env.BASEURL}/api/logout`, {
-            credentials: 'include'
-        })
+        const { data } = await axios.post(`${process.env.BASEURL}/api/logout`,
+            {
 
-        // if (data) {
-        //     router.reload()
-        // }
+            },
+            {
+                withCredentials: true,
+                credentials: 'include'
+            })
+
+        if (data) {
+            router.reload()
+        }
     }
 
     return (

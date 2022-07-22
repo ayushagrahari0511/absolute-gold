@@ -6,7 +6,7 @@ import { faSearch, faMicrophone, faUser } from '@fortawesome/free-solid-svg-icon
 import { FaRegUser, FaUserAlt, FaTimes, FaCog, FaHeart } from 'react-icons/fa'
 import { AiOutlineMenu } from 'react-icons/ai'
 import Image from 'next/image'
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
 import { IoCart } from 'react-icons/io5'
 import axios from 'axios'
 import { CgDollar } from 'react-icons/cg'
@@ -25,16 +25,13 @@ const Landing = () => {
   // Logout user-------------------
   // -------------------------
   const handleLogout = async () => {
-    const config = {
-      WithCredentials: true,
-      Credentials: 'include'
-    };
-    const {data} = await axios.get(`${process.env.BASEURL}/api/logout`, {
+    const { data } = await axios.post(`${process.env.BASEURL}/api/logout`,
+      {}, {
       withCredentials: true,
       credentials: 'include'
-})
+    })
 
-    if(data) {
+    if (data) {
       router.reload('/home')
     }
   }
